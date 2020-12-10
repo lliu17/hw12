@@ -17,6 +17,7 @@ app.listen(port, () => console.log(`listening on port ${port}`));
 
 // set up page
 app.get("/", (req, res) => {
+    console.log("here");
     res.sendFile(__dirname + "/stockTicker.html");
 })
 
