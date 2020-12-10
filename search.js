@@ -22,7 +22,7 @@ app.get("/", (req, res) => {
 })
 
 // post action 
-app.post("/", function (req, res) {
+app.post("/result", function (req, res) {
     const name = req.body.name;
     console.log(name);
     
@@ -52,11 +52,11 @@ app.post("/", function (req, res) {
                         for (i=0; i<query.length; i++) {
                             res.write("Company name: " + query[i].Company + "<br>");
                             res.write("Ticker: " + query[i].Ticker + "<br>");
-                            res.write("<br>(refresh for new search)");
+                            res.write("<br>(use 'go back' for new search)");
                         }
                     }
                     else {
-                        res.write("not found (refresh for new search)");
+                        res.write("not found (use 'go back' for new search)");
                     }
                     res.end();
                 }
